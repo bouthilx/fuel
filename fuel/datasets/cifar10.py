@@ -30,7 +30,7 @@ class CIFAR10(H5PYDataset):
 
     """
     filename = 'cifar10.hdf5'
-    default_transformers = uint8_pixels_to_floatX(('features',))
+#    default_transformers = uint8_pixels_to_floatX(('features',))
 
     def __init__(self, which_sets, **kwargs):
         kwargs.setdefault('load_in_memory', True)
