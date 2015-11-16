@@ -18,6 +18,8 @@ from fuel.converters import iris
 from fuel.converters import mnist
 from fuel.converters import svhn
 
+print cifar10.fill_subparser_pca_099("")
+
 __version__ = '0.2'
 all_converters = (
     ('binarized_mnist', binarized_mnist.fill_subparser),

@@ -35,6 +35,7 @@ def main(args=None):
 
     """
     built_in_datasets = dict(converters.all_converters)
+    print built_in_datasets
     if fuel.config.extra_converters:
         for name in fuel.config.extra_converters:
             extra_datasets = dict(
@@ -64,7 +65,10 @@ def main(args=None):
 
     args = parser.parse_args(args)
     args_dict = vars(args)
+    print args_dict['which_']
+    print convert_functions
     convert_function = convert_functions[args_dict.pop('which_')]
+    print args_dict
     try:
         output_paths = convert_function(**args_dict)
     except MissingInputFiles as e:
